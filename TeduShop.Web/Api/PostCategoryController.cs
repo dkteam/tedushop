@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+﻿using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using TeduShop.Model.Models;
@@ -13,7 +10,7 @@ namespace TeduShop.Web.Api
     [RoutePrefix("api/postcategory")]
     public class PostCategoryController : ApiControllerBase
     {
-        IPostCategoryService _postCategoryService;
+        private IPostCategoryService _postCategoryService;
 
         public PostCategoryController(IErrorService errorService, IPostCategoryService postCategoryService) : base(errorService)
         {
@@ -25,22 +22,14 @@ namespace TeduShop.Web.Api
         {
             return CreateHttpResponse(request, () =>
             {
-                HttpResponseMessage response = null;
-                if (ModelState.IsValid)
-                {
-                    request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
-                }
-                else
-                {
-                    var listCategroy = _postCategoryService.GetAll();
-                    _postCategoryService.Save();
+                var listCategroy = _postCategoryService.GetAll();
 
-                    response = Request.CreateResponse(HttpStatusCode.OK, listCategroy);
-                }
+                HttpResponseMessage response = request.CreateResponse(HttpStatusCode.OK, listCategroy);
+
                 return response;
             });
         }
-        
+
         public HttpResponseMessage Post(HttpRequestMessage request, PostCategory postCategory)
         {
             return CreateHttpResponse(request, () =>
@@ -100,6 +89,5 @@ namespace TeduShop.Web.Api
                 return response;
             });
         }
-    
     }
 }
