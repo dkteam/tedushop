@@ -22,6 +22,8 @@ namespace TeduShop.Web.Mappings
                 //cfg.CreateMap<Category, CategoryViewModel>().MaxDepth(2);
                 cfg.CreateMap<Post, PostViewModel>().MaxDepth(2);
                 cfg.CreateMap<Tag, TagViewModel>().MaxDepth(2);
+                cfg.CreateMap<PostCategory, PostCategoryViewModel>().MaxDepth(2);
+                cfg.CreateMap<PostTag, PostTagViewModel>().MaxDepth(2);
                 //cfg.CreateMap<Ebook, EbookViewModel>().MaxDepth(2);
                 //cfg.CreateMap<Page, PageViewModel>().MaxDepth(2);
                 //cfg.CreateMap<CourseCategory, CourseCategoryViewModel>().MaxDepth(2);
