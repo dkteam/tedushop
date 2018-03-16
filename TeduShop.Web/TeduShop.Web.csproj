@@ -216,13 +216,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
-    <Content Include="app\app.routes.js" />
+    <Content Include="app\components\home\homeController.js" />
+    <Content Include="app\components\home\homeView.html" />
+    <Content Include="app\components\products\products.module.js" />
     <Content Include="app\components\products\productAddController.js" />
     <Content Include="app\components\products\productAddView.html" />
     <Content Include="app\components\products\productEditController.js" />
     <Content Include="app\components\products\productEditView.html" />
     <Content Include="app\components\products\productListController.js" />
     <Content Include="app\components\products\productListView.html" />
+    <Content Include="app\shared\modules\tedushop.common.js" />
     <Content Include="Assets\admin\css\AdminLTE.css" />
     <Content Include="Assets\admin\css\AdminLTE.min.css" />
     <Content Include="Assets\admin\css\alt\AdminLTE-bootstrap-social.css" />
@@ -292,6 +295,23 @@
     <Content Include="Assets\admin\js\demo.js" />
     <Content Include="Assets\admin\js\pages\dashboard.js" />
     <Content Include="Assets\admin\js\pages\dashboard2.js" />
+    <Content Include="Assets\admin\libs\angular-ui-router\release\angular-ui-router.js" />
+    <Content Include="Assets\admin\libs\angular-ui-router\release\angular-ui-router.min.js" />
+    <Content Include="Assets\admin\libs\angular-ui-router\src\common.js" />
+    <Content Include="Assets\admin\libs\angular-ui-router\src\resolve.js" />
+    <Content Include="Assets\admin\libs\angular-ui-router\src\state.js" />
+    <Content Include="Assets\admin\libs\angular-ui-router\src\stateDirectives.js" />
+    <Content Include="Assets\admin\libs\angular-ui-router\src\stateFilters.js" />
+    <Content Include="Assets\admin\libs\angular-ui-router\src\templateFactory.js" />
+    <Content Include="Assets\admin\libs\angular-ui-router\src\urlMatcherFactory.js" />
+    <Content Include="Assets\admin\libs\angular-ui-router\src\urlRouter.js" />
+    <Content Include="Assets\admin\libs\angular-ui-router\src\view.js" />
+    <Content Include="Assets\admin\libs\angular-ui-router\src\viewDirective.js" />
+    <Content Include="Assets\admin\libs\angular-ui-router\src\viewScroll.js" />
+    <Content Include="Assets\admin\libs\angular\angular-csp.css" />
+    <Content Include="Assets\admin\libs\angular\angular.js" />
+    <Content Include="Assets\admin\libs\angular\angular.min.js" />
+    <Content Include="Assets\admin\libs\angular\index.js" />
     <Content Include="Assets\admin\libs\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.css" />
     <Content Include="Assets\admin\libs\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.min.css" />
     <Content Include="Assets\admin\libs\bootstrap-colorpicker\dist\img\bootstrap-colorpicker\alpha-horizontal.png" />
@@ -6801,20 +6821,6 @@
     <Content Include="Assets\admin\libs\select2\src\scss\_dropdown.scss" />
     <Content Include="Assets\admin\libs\select2\src\scss\_multiple.scss" />
     <Content Include="Assets\admin\libs\select2\src\scss\_single.scss" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
-    <None Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -6870,7 +6876,21 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Assets\admin\libs\angular\.bower.json" />
+    <Content Include="Assets\admin\libs\angular\angular.min.js.gzip" />
+    <Content Include="Assets\admin\libs\angular\angular.min.js.map" />
+    <Content Include="Assets\admin\libs\angular\bower.json" />
+    <Content Include="Assets\admin\libs\angular\LICENSE.md" />
+    <Content Include="Assets\admin\libs\angular\package.json" />
+    <Content Include="Assets\admin\libs\angular\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\admin\libs\angular-ui-router\.bower.json" />
+    <Content Include="Assets\admin\libs\angular-ui-router\bower.json" />
+    <Content Include="Assets\admin\libs\angular-ui-router\CHANGELOG.md" />
+    <Content Include="Assets\admin\libs\angular-ui-router\CONTRIBUTING.md" />
+    <Content Include="Assets\admin\libs\angular-ui-router\LICENSE" />
+    <Content Include="Assets\admin\libs\angular-ui-router\README.md" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
